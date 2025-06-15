@@ -1,1 +1,12 @@
-[{"serverID":"A","name":"Dual-RP | FIRST X3 PAYDAY X4 DONATE","ip":"54.38.117.77:7770","serverPayment":90},{"serverID":"B","name":"Server Two","ip":"234.234.234.234:7777","serverPayment":90},{"serverID":"C","name":"Server Two","ip":"234.234.234.234:7777","serverPayment":90},{"serverID":"D","name":"Server Two","ip":"234.234.234.234:7777","serverPayment":90}]
+[
+  {"serverID":"A","name":"Dual-RP | FIRST X3 PAYDAY X4 DONATE","ip":"54.38.117.77:7770","serverPayment":90},
+  {"serverID":"B","name":"Server B","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"C","name":"Server C","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"D","name":"Server D","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"E","name":"Server E","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"F","name":"Server F","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"G","name":"Server G","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"H","name":"Server H","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"I","name":"Server I","ip":"234.234.234.234:7777","serverPayment":90},
+  {"serverID":"G","name":"Server G","ip":"234.234.234.234:7777","serverPayment":90}
+]
