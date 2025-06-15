@@ -1,0 +1,41 @@
+name: Decrease ServerPayment Daily
+
+# Запускаем workflow по расписанию — каждый день в 00:00 UTC
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Каждый день в полночь UTC
+
+jobs:
+  decrease-payment:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Клонируем репозиторий
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Шаг 2: Устанавливаем Node.js (нужно для запуска скрипта)
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Шаг 3: Запускаем скрипт, который уменьшит serverPayment
+      - name: Decrease serverPayment
+        run: |
+          node scripts/decrease_payment.js
+
+      # Шаг 4: Добавляем и коммитим изменения, если они есть
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add hosted.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Decrease serverPayment by 1"
+            git push
+          else
+            echo "No changes to commit"
+          fi
